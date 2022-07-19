@@ -1,47 +1,16 @@
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Mi primera programada</title>
-    <script>
-      function aleatorio(min, max) {
-        return Math.floor(Math.random() * (max - min + 1) + min)
-      }
-      // 1 es piedra, 2 es papel, 3 es tijera
-      let jugador = 0
-      let pc = aleatorio(1,3)
-      jugador = prompt("Elige: 1 para piedra, 2 para papel, 3 para tijera")
-      // alert("Elegiste " + jugador)
-      if(jugador == 1) {
-        alert("Elegiste piedra 🪨")
-      } else if (jugador == 2) {
-        alert("Elegiste papel 📃")
-      } else if (jugador == 3) {
-        alert("Elegiste tijera ✂️")
-      } else {
-        alert("Elegiste PERDER")
-      }
-      if(pc == 1) {
-        alert("Elegiste piedra 🪨")
-      } else if (pc == 2) {
-        alert("Elegiste papel 📃")
-      } else if (pc == 3) {
-        alert("Elegiste tijera ✂️")
-      }
-      // COMBATE
-      if (pc == jugador) {
-        alert("EMPATE")
-      } else if (jugador == 1 && pc == 3) {
-        alert("GANASTE")
-      } else if (jugador == 2 && pc == 1) {
-        alert("GANASTE")
-      } else if (jugador == 3 && pc == 2) {
-        alert("GANASTE")
-      } else {
-        alert("PERDISTE")
-      }
-    </script>
-  </head>
-  <body>
-    <h1>Piedra, papel o tijra</h1>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <title>Mi primera programada</title>
+  <script>
+  let nombre = ""
+  nombre = prompt("¿Cuál es tu nombre?")
+  alert("Bienvenida " + nombre)
+  </script>
+</head>
+<body>
+  <h1>Primer intento de website</h1>
+  <p>Este es nuestro primer programa complto y profesional</p>
+  <p>Gran programa</p>
+</body>
 </html>
