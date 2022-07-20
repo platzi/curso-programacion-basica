@@ -1,13 +1,25 @@
 .titulo {
-    color: hotpink;
-    width: 310px;
-    height: 50px;
-    background-color: teal;
+  color: hotpink;
+  width: 310px;
+  height: 50px;
+  background-color: teal;
 }
 
 #seleccionar-mascota {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tarjeta-de-mokepon {
+  width: 100px;
+  height: 100px;
+  background: aquamarine;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+input {
+  display: none;
 }
