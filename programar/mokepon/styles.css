@@ -59,3 +59,20 @@ body {
 input {
   display: none;
 }
+
+#seleccionar-ataque {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.boton-de-ataque {
+  background-color: #11468F;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border-color: transparent;
+  width: 180px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
