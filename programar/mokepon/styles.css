@@ -56,10 +56,6 @@ body {
   margin-top: 30px;
 }
 
-input:checked label {
-  background-color: hotpink;
-}
-
 input {
   display: none;
 }
