@@ -250,7 +250,7 @@ function secuenciaAtaque() {
                 boton.disabled = true  
             }
             if (ataqueJugador.length === 5) {
-                enviarAtaques(ataqueJugador)
+                enviarAtaques()
             }
         })
     })
@@ -258,7 +258,7 @@ function secuenciaAtaque() {
 
 }
 
-function enviarAtaques(ataqueJugador) {
+function enviarAtaques() {
     fetch(`http://localhost:8080/mokepon/${jugadorId}/ataques`, {
         method: "post",
         headers: {
