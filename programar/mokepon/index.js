@@ -59,8 +59,8 @@ app.post("/mokepon/:jugadorId", (req, res) => {
 
 app.post("/mokepon/:jugadorId/posicion", (req, res) => {
   const jugadorId = req.params.jugadorId || ""
-  const x = req.body.mokepon || 0
-  const y = req.body.mokepon || 0
+  const x = req.body.x || 0
+  const y = req.body.y || 0
 
   const jugadorIndex = jugadores.findIndex((jugador) => jugadorId === jugador.id)
 
