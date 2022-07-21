@@ -250,7 +250,7 @@ function secuenciaAtaque() {
                 boton.disabled = true  
             }
             if (ataqueJugador.length === 5) {
-                enviarAtaques(ataqueJugador)
+                enviarAtaques()
             }
         })
     })
@@ -258,16 +258,33 @@ function secuenciaAtaque() {
 
 }
 
-function enviarAtaques(ataqueJugador) {
+function enviarAtaques() {
     fetch(`http://localhost:8080/mokepon/${jugadorId}/ataques`, {
         method: "post",
         headers: {
             "Content-Type": "application/json"
         },
-        body: {
+        body: JSON.stringify({
             ataques: ataqueJugador
-        }
+        })
     })
+
+    intervalo = setInterval(obtenerAtaques, 50)
+}
+
+function obtenerAtaques() {
+    fetch(`http://localhost:8080/mokepon/${enemigoId}/ataques`)
+        .then(function (res) {
+            if (res.ok) {
+                res.json()
+                    .then(function ({ ataques }) {
+                        if (ataques.length === 5) {
+                            ataqueEnemigo = ataques
+                            combate()
+                        }
+                    })
+            }
+        })
 }
 
 function seleccionarMascotaEnemigo(enemigo) {
@@ -304,6 +321,7 @@ function indexAmbosOponente(jugador, enemigo) {
 }
 
 function combate() {
+    clearInterval(intervalo)
     
     for (let index = 0; index < ataqueJugador.length; index++) {
         if(ataqueJugador[index] === ataqueEnemigo[index]) {
