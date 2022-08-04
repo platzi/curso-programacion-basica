@@ -36,7 +36,7 @@ app.get("/unirse", (req, res) => {
   res.send(id)
 })
 
-app.post("mokepon/:jugadorId", (req, res) => {
+app.post("/mokepon/:jugadorId", (req, res) => {
   const jugadorId = req.params.jugadorId || ""
   const nombre = req.body.mokepon || ""
   const mokepon = new Mokepon(nombre)
